@@ -2,8 +2,8 @@
 
 ## Install
 ```
-$ deno run -A install.ts
-habitra-cli was installed successfully.
+$ deno install https://deno.land/x/habitra/cli.ts
+✅ Successfully installed habitra
 $ habitra --version
 habitra-cli 0.0.0
 ```
