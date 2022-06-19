@@ -1,17 +1,45 @@
 import { Command } from "https://deno.land/x/cliffy@v0.24.2/command/mod.ts";
 
+const apiBase = "https://api.habitra.io";
+
 const create = new Command()
   .description("Create user command")
   .option("--id <id:string>", "id", { required: true })
   .option("--password <password:string>", "password", { required: true })
   .action(async (options) => {
-    const response = await fetch("https://api.habitra.io/v1/users", {
+    const response = await fetch(`${apiBase}/v1/users`, {
       method: "POST",
       body: JSON.stringify({ id: options.id, password: options.password }),
     });
     console.log(await response.text());
   });
 
+const update = new Command()
+  .description("Update user command")
+  .option("--password <password:string>", "Habits new password", {
+    required: true,
+  })
+  .env("HABITRA_ID=<value:string>", "Habitra ID", { required: true })
+  .env("HABITRA_PASSWORD=<value:string>", "Habitra Password", {
+    required: true,
+  })
+  .action(async (options) => {
+    const response = await fetch(
+      `${apiBase}/v1/users/${options.habitraId}`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `Basic ${
+            btoa(`${options.habitraId}:${options.habitraPassword}`)
+          }`,
+        },
+        body: JSON.stringify({ password: options.password }),
+      },
+    );
+    console.log(await response.text());
+  });
+
 export const user = new Command()
   .description("User command")
-  .command("create", create);
+  .command("create", create)
+  .command("update", update);
