@@ -2,7 +2,7 @@ import { Command } from "https://deno.land/x/cliffy@v0.24.2/command/mod.ts";
 
 const apiBase = "https://api.habitra.io";
 
-const create = new Command()
+const createCommand = new Command()
   .description("Create user command")
   .option("--id <id:string>", "id", { required: true })
   .option("--password <password:string>", "password", { required: true })
@@ -14,7 +14,7 @@ const create = new Command()
     console.log(await response.text());
   });
 
-const update = new Command()
+const updateCommand = new Command()
   .description("Update user command")
   .option("--password <password:string>", "Habits new password", {
     required: true,
@@ -39,7 +39,7 @@ const update = new Command()
     console.log(await response.text());
   });
 
-export const user = new Command()
+export const userCommand = new Command()
   .description("User command")
-  .command("create", create)
-  .command("update", update);
+  .command("create", createCommand)
+  .command("update", updateCommand)
