@@ -39,7 +39,29 @@ const updateCommand = new Command()
     console.log(await response.text());
   });
 
+const deleteCommand = new Command()
+  .description("Delete user command")
+  .env("HABITRA_ID=<value:string>", "Habitra ID", { required: true })
+  .env("HABITRA_PASSWORD=<value:string>", "Habitra Password", {
+    required: true,
+  })
+  .action(async (options) => {
+    const response = await fetch(
+      `${apiBase}/v1/users/${options.habitraId}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Basic ${
+            btoa(`${options.habitraId}:${options.habitraPassword}`)
+          }`,
+        },
+      },
+    );
+    console.log(await response.text());
+  });
+
 export const userCommand = new Command()
   .description("User command")
   .command("create", createCommand)
   .command("update", updateCommand)
+  .command("delete", deleteCommand);
