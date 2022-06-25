@@ -1,4 +1,4 @@
-import { Command } from "https://deno.land/x/cliffy@v0.24.2/command/mod.ts";
+import { Command } from "./deps.ts";
 import { VERSION } from "./version.ts";
 import { userCommand } from "./command/user.ts";
 
