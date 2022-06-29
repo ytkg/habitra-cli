@@ -1,4 +1,4 @@
-import { Command } from "../deps.ts";
+import { Command, HelpCommand } from "../deps.ts";
 
 const apiBase = "https://api.habitra.io";
 
@@ -62,6 +62,8 @@ const deleteCommand = new Command()
 
 export const userCommand = new Command()
   .description("User command")
+  .default("help")
+  .command("help", new HelpCommand().hidden())
   .command("create", createCommand)
   .command("update", updateCommand)
   .command("delete", deleteCommand);
