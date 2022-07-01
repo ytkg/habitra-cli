@@ -1,3 +1,3 @@
-import { MainCommand } from "./command/main.ts";
+import { MainCommand } from "./commands/main.ts";
 
 await new MainCommand().parse(Deno.args);
