@@ -26,8 +26,13 @@ const createCommand = new Command()
     console.log(await response.text());
   });
 
-export const habitCommand = new Command()
-  .description("Habit command")
-  .default("help")
-  .command("help", new HelpCommand().hidden())
-  .command("create", createCommand);
+export class HabitCommand extends Command {
+  constructor() {
+    super();
+    this.description("Habit command")
+      .default("help")
+      .command("help", new HelpCommand().hidden())
+      .command("create", createCommand)
+      .reset();
+  }
+}

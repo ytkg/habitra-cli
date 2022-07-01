@@ -1,7 +1,7 @@
 import { assertEquals } from "../dev_deps.ts";
-import { habitCommand } from "./habit.ts";
+import { HabitCommand } from "./habit.ts";
 
-const command = habitCommand.reset().help({ colors: false }).helpOption(false);
+const command = new HabitCommand().help({ colors: false }).helpOption(false);
 
 Deno.test("help command", () => {
   const output = command.getHelp();
