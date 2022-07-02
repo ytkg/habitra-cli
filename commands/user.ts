@@ -60,10 +60,15 @@ const deleteCommand = new Command()
     console.log(await response.text());
   });
 
-export const userCommand = new Command()
-  .description("User command")
-  .default("help")
-  .command("help", new HelpCommand().hidden())
-  .command("create", createCommand)
-  .command("update", updateCommand)
-  .command("delete", deleteCommand);
+export class UserCommand extends Command {
+  constructor() {
+    super();
+    this.description("User command")
+      .default("help")
+      .command("help", new HelpCommand().hidden())
+      .command("create", createCommand)
+      .command("update", updateCommand)
+      .command("delete", deleteCommand)
+      .reset();
+  }
+}
