@@ -2,5 +2,17 @@
   "tasks": {
     "exec": "deno run --allow-net --allow-env cli.ts",
     "check": "deno fmt --check && deno lint"
+  },
+  "velociraptor": {
+    "scripts": {
+      "exec": "deno run --allow-net --allow-env cli.ts",
+      "check": "deno fmt --check && deno lint",
+      "pre-commit": {
+        "cmd": [
+          "vr check"
+        ],
+        "gitHook": "pre-commit"
+      }
+    }
   }
 }
