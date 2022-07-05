@@ -1,6 +1,5 @@
 import { Command } from "../../deps.ts";
-
-const apiBase = "https://api.habitra.io";
+import { Request } from "../lib/request.ts";
 
 export class CreateCommand extends Command {
   constructor() {
@@ -9,10 +8,11 @@ export class CreateCommand extends Command {
       .option("--id <id:string>", "id", { required: true })
       .option("--password <password:string>", "password", { required: true })
       .action(async (options) => {
-        const response = await fetch(`${apiBase}/v1/users`, {
-          method: "POST",
-          body: JSON.stringify({ id: options.id, password: options.password }),
-        });
+        const response = await Request.post(
+          `/users`,
+          {},
+          JSON.stringify({ id: options.id, password: options.password }),
+        );
         console.log(await response.text());
       })
       .reset();

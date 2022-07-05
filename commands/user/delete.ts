@@ -1,6 +1,5 @@
 import { Command } from "../../deps.ts";
-
-const apiBase = "https://api.habitra.io";
+import { Request } from "../lib/request.ts";
 
 export class DeleteCommand extends Command {
   constructor() {
@@ -11,15 +10,12 @@ export class DeleteCommand extends Command {
         required: true,
       })
       .action(async (options) => {
-        const response = await fetch(
-          `${apiBase}/v1/users/${options.habitraId}`,
+        const response = await Request.delete(
+          `/users/${options.habitraId}`,
           {
-            method: "DELETE",
-            headers: {
-              Authorization: `Basic ${
-                btoa(`${options.habitraId}:${options.habitraPassword}`)
-              }`,
-            },
+            Authorization: `Basic ${
+              btoa(`${options.habitraId}:${options.habitraPassword}`)
+            }`,
           },
         );
         console.log(await response.text());
