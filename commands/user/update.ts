@@ -1,6 +1,5 @@
 import { Command } from "../../deps.ts";
-
-const apiBase = "https://api.habitra.io";
+import { Request } from "../lib/request.ts";
 
 export class UpdateCommand extends Command {
   constructor() {
@@ -14,17 +13,14 @@ export class UpdateCommand extends Command {
         required: true,
       })
       .action(async (options) => {
-        const response = await fetch(
-          `${apiBase}/v1/users/${options.habitraId}`,
+        const response = await await Request.put(
+          `/users/${options.habitraId}`,
           {
-            method: "PUT",
-            headers: {
-              Authorization: `Basic ${
-                btoa(`${options.habitraId}:${options.habitraPassword}`)
-              }`,
-            },
-            body: JSON.stringify({ password: options.password }),
+            Authorization: `Basic ${
+              btoa(`${options.habitraId}:${options.habitraPassword}`)
+            }`,
           },
+          JSON.stringify({ password: options.password }),
         );
         console.log(await response.text());
       })
