@@ -9,16 +9,11 @@ Deno.test("help command", () => {
   assertEquals(
     output,
     `
-  Usage:   habitra-cli
-  Version: 0.0.0      
+  Usage: habitra-cli
 
   Description:
 
     Command line tool for HabiTra
-
-  Options:
-
-    -V, --version  - Show the version number for this program.  
 
   Commands:
 
