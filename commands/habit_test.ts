@@ -18,6 +18,7 @@ Deno.test("help command", () => {
   Commands:
 
     create  - Create habit command
+    update  - Update habit command
 `,
   );
 });
