@@ -5,7 +5,6 @@ export class CreateCommand extends Command {
   constructor() {
     super();
     this.description("Create habit command")
-      .option("--id <id:string>", "id", { required: true })
       .option("--name <name:string>", "name", { required: true })
       .env("HABITRA_ID=<value:string>", "Habitra ID", { required: true })
       .env("HABITRA_PASSWORD=<value:string>", "Habitra Password", {
@@ -19,7 +18,7 @@ export class CreateCommand extends Command {
               btoa(`${options.habitraId}:${options.habitraPassword}`)
             }`,
           },
-          JSON.stringify({ id: options.id, name: options.name }),
+          JSON.stringify({ name: options.name }),
         );
         console.log(await response.text());
       })

@@ -17,7 +17,6 @@ Deno.test("help command", () => {
 
   Options:
 
-    --id    <id>    - id    (required)
     --name  <name>  - name  (required)
 
   Environment variables:
