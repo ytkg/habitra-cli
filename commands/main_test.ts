@@ -19,6 +19,7 @@ Deno.test("help command", () => {
 
     user   - User command 
     habit  - Habit command
+    track  - Track command
 `,
   );
 });
