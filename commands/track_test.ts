@@ -17,6 +17,7 @@ Deno.test("help command", () => {
 
   Commands:
 
+    list    - Show track command  
     create  - Create track command
 `,
   );
