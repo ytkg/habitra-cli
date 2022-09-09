@@ -19,6 +19,7 @@ Deno.test("help command", () => {
 
     list    - Show track command  
     create  - Create track command
+    delete  - Delete track command
 `,
   );
 });
