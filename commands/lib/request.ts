@@ -5,7 +5,7 @@ export class Request {
     return fetch(`${apiBase}/${path}`, { method: "Get", headers });
   }
 
-  static post(path: string, headers: { [key: string]: string }, body: string) {
+  static post(path: string, headers: { [key: string]: string }, body?: string) {
     return fetch(`${apiBase}/${path}`, { method: "POST", headers, body });
   }
 
