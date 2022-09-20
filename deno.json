@@ -1,12 +1,12 @@
 {
   "tasks": {
     "exec": "deno run --allow-net --allow-env cli.ts",
-    "check": "deno fmt --check && deno lint"
+    "check": "deno fmt --check --ignore=CHANGELOG.md && deno lint"
   },
   "velociraptor": {
     "scripts": {
       "exec": "deno run --allow-net --allow-env cli.ts",
-      "check": "deno fmt --check && deno lint",
+      "check": "deno fmt --check --ignore=CHANGELOG.md && deno lint",
       "pre-commit": {
         "cmd": [
           "vr check"
