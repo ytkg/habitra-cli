@@ -7,8 +7,8 @@
 ## Install
 
 ```
-$ deno install https://deno.land/x/habitra/cli.ts
+$ deno install --allow-env --allow-net https://deno.land/x/habitra/cli.ts
 ✅ Successfully installed habitra
 $ habitra --version
-habitra-cli 0.0.0
+habitra-cli 0.1.1
 ```
