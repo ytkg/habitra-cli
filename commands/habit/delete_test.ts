@@ -21,8 +21,8 @@ Deno.test("help command", () => {
 
   Environment variables:
 
-    HABITRA_ID        <value>  - Habitra ID      
-    HABITRA_PASSWORD  <value>  - Habitra Password
+    HABITRA_ID        <value>  - Habitra ID        (required)
+    HABITRA_PASSWORD  <value>  - Habitra Password  (required)
 `,
   );
 });
