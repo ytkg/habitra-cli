@@ -1,5 +1,10 @@
 # Changelog
 
+## [v0.1.1](https://github.com/ytkg/habitra-cli/compare/v0.1.0...v0.1.1) - 2022-09-20
+- Ignore CHANGELOG.md with `deno fmt` by @ytkg in https://github.com/ytkg/habitra-cli/pull/29
+- Update std to v0.156.0 by @ytkg in https://github.com/ytkg/habitra-cli/pull/27
+- Update cliffy to v0.25.1 by @ytkg in https://github.com/ytkg/habitra-cli/pull/28
+
 ## [v0.1.0](https://github.com/ytkg/habitra-cli/compare/v0.0.0...v0.1.0) - 2022-09-09
 - Add user create command by @ytkg in https://github.com/ytkg/habitra-cli/pull/1
 - Add user update command by @ytkg in https://github.com/ytkg/habitra-cli/pull/2
