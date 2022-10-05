@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.2.0](https://github.com/ytkg/habitra-cli/compare/v0.1.1...v0.2.0) - 2022-10-05
+- Update how to install by @ytkg in https://github.com/ytkg/habitra-cli/pull/31
+- Support date option in track create command by @ytkg in https://github.com/ytkg/habitra-cli/pull/33
+
 ## [v0.1.1](https://github.com/ytkg/habitra-cli/compare/v0.1.0...v0.1.1) - 2022-09-20
 - Ignore CHANGELOG.md with `deno fmt` by @ytkg in https://github.com/ytkg/habitra-cli/pull/29
 - Update std to v0.156.0 by @ytkg in https://github.com/ytkg/habitra-cli/pull/27
