@@ -18,6 +18,7 @@ Deno.test("help command", () => {
   Options:
 
     --habit-id  <habitId>  - Habit ID  (required)
+    --date      <date>     - Date                
 
   Environment variables:
 

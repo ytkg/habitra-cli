@@ -6,6 +6,7 @@ export class CreateCommand extends Command {
     super();
     this.description("Create track command")
       .option("--habit-id <habitId:string>", "Habit ID", { required: true })
+      .option("--date <date:string>", "Date")
       .env("HABITRA_ID=<value:string>", "Habitra ID", { required: true })
       .env("HABITRA_PASSWORD=<value:string>", "Habitra Password", {
         required: true,
@@ -18,6 +19,7 @@ export class CreateCommand extends Command {
               btoa(`${options.habitraId}:${options.habitraPassword}`)
             }`,
           },
+          JSON.stringify({ date: options.date }),
         );
         console.log(await response.text());
       })
