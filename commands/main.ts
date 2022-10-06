@@ -6,7 +6,7 @@ import { TrackCommand } from "./track.ts";
 export class MainCommand extends Command {
   constructor() {
     super();
-    this.name("habitra-cli")
+    this.name("habitra")
       .description("Command line tool for HabiTra")
       .default("help")
       .command("help", new HelpCommand().hidden())
