@@ -9,7 +9,7 @@ Deno.test("help command", () => {
   assertEquals(
     output,
     `
-  Usage: habitra-cli
+  Usage: habitra
 
   Description:
 
