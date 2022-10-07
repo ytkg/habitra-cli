@@ -17,9 +17,10 @@ Deno.test("help command", () => {
 
   Commands:
 
-    user   - User command 
-    habit  - Habit command
-    track  - Track command
+    user     - User command                                          
+    habit    - Habit command                                         
+    track    - Track command                                         
+    upgrade  - Upgrade habitra executable to latest or given version.
 `,
   );
 });
