@@ -1,5 +1,10 @@
 # Changelog
 
+## [v0.3.0](https://github.com/ytkg/habitra-cli/compare/v0.2.0...v0.3.0) - 2022-10-07
+- Rename CLI by @ytkg in https://github.com/ytkg/habitra-cli/pull/34
+- Add prefix "v" to verison number by @ytkg in https://github.com/ytkg/habitra-cli/pull/36
+- Add upgrade command by @ytkg in https://github.com/ytkg/habitra-cli/pull/37
+
 ## [v0.2.0](https://github.com/ytkg/habitra-cli/compare/v0.1.1...v0.2.0) - 2022-10-05
 - Update how to install by @ytkg in https://github.com/ytkg/habitra-cli/pull/31
 - Support date option in track create command by @ytkg in https://github.com/ytkg/habitra-cli/pull/33
