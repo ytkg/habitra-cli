@@ -2,7 +2,7 @@ const apiBase = "https://api.habitra.io/v1";
 
 export class Request {
   static get(path: string, headers: { [key: string]: string }) {
-    return fetch(`${apiBase}/${path}`, { method: "Get", headers });
+    return fetch(`${apiBase}/${path}`, { method: "GET", headers });
   }
 
   static post(path: string, headers: { [key: string]: string }, body?: string) {
