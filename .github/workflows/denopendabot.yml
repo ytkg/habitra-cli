@@ -8,6 +8,6 @@ jobs:
     name: Update dependencies
     runs-on: ubuntu-latest
     steps:
-      - uses: hasundue/denopendabot@0.5.10 
+      - uses: hasundue/denopendabot@0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
