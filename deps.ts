@@ -5,4 +5,4 @@ export {
 export {
   DenoLandProvider,
   UpgradeCommand,
-} from "https://deno.land/x/cliffy@v0.25.2/command/upgrade/mod.ts";
+} from "https://deno.land/x/cliffy@v0.25.4/command/upgrade/mod.ts";
