@@ -1,5 +1,18 @@
 # Changelog
 
+## [v0.3.1](https://github.com/ytkg/habitra-cli/compare/v0.3.0...v0.3.1) - 2022-12-28
+- Update README.md by @ytkg in https://github.com/ytkg/habitra-cli/pull/38
+- Fix typo by @ytkg in https://github.com/ytkg/habitra-cli/pull/40
+- Add Denopendabot by @ytkg in https://github.com/ytkg/habitra-cli/pull/41
+- Update denopendabot to v0.6.1 by @ytkg in https://github.com/ytkg/habitra-cli/pull/42
+- Update cliffy to v0.25.2 by @ytkg in https://github.com/ytkg/habitra-cli/pull/45
+- build(deps): bump deno.land/std from 0.156.0 to 0.160.0 by @github-actions in https://github.com/ytkg/habitra-cli/pull/51
+- Fixed main branch by @ytkg in https://github.com/ytkg/habitra-cli/pull/55
+- build(deps): update dependencies by @github-actions in https://github.com/ytkg/habitra-cli/pull/56
+- build(deps): update dependencies by @github-actions in https://github.com/ytkg/habitra-cli/pull/68
+- build(deps): update dependencies by @github-actions in https://github.com/ytkg/habitra-cli/pull/81
+- Remove Denopendabot by @ytkg in https://github.com/ytkg/habitra-cli/pull/82
+
 ## [v0.3.0](https://github.com/ytkg/habitra-cli/compare/v0.2.0...v0.3.0) - 2022-10-07
 - Rename CLI by @ytkg in https://github.com/ytkg/habitra-cli/pull/34
 - Add prefix "v" to verison number by @ytkg in https://github.com/ytkg/habitra-cli/pull/36
